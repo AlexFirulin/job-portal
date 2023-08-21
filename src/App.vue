@@ -2,9 +2,14 @@
   <div class="main-page">
     <div class="main-wrapper">
       <div class="agency-name">
-        <div class="name-text"><span class="name-comp">EasyJob</span></div>
+        <div class="name-text">
+          <span class="name-comp">EasyJob</span>
+        </div>
         <div class=""><span class="name"></span></div>
-        <div class=""><span class="name"><a href="tel:+4915111032160"></a>+4915111032160</span></div>
+        <div class="name-contacts">
+          <a href="tel:+4915111032160" class="tel-num"><span>+4915111032160</span></a>
+          <a href="" class="faceb"><span class="faceb-name">Facebook</span></a>
+        </div>
       </div>
       <div class="header">
         <div><span class="header-text">Робота за кордоном - це не складно</span></div>
@@ -12,11 +17,11 @@
 
  <nav class="navigation">
         <ul class="nav-list">
-          <li class="nav-item"><a class="nav-link" @click="showVac"><span class="nav-text">Вакансии</span></a></li>
-          <li class="nav-item"><a href="" class="nav-link"><span class="nav-text">Услуги</span></a></li>
-          <li class="nav-item"><a href="" class="nav-link"><span class="nav-text">О нас</span></a></li>
-          <li class="nav-item"><a href="" class="nav-link"><span class="nav-text">Новости</span></a></li>
-          <li class="nav-item"><a href="" class="nav-link"><span class="nav-text">Контакты</span></a></li>
+          <li class="nav-item"><a class="nav-link" @click="showVac"><span class="nav-text">Вакансіі</span></a></li>
+          <li class="nav-item"><a href="" class="nav-link"><span class="nav-text">Послуги</span></a></li>
+          <li class="nav-item"><a href="" class="nav-link"><span class="nav-text">Про компанію</span></a></li>
+          <li class="nav-item"><a href="" class="nav-link"><span class="nav-text">Новини</span></a></li>
+          <li class="nav-item"><a href="" class="nav-link"><span class="nav-text">Контакти</span></a></li>
         </ul>
       </nav>
       <div class="separator"></div>
@@ -24,7 +29,7 @@
     <work-list v-if="showJob"></work-list>
     <div class="main-page-content" v-else>
       <span class="main-info-title">
-        Ласкаво просимо до "Job Center" – вашого надійного партнера у пошуку роботи та кар'єрного зростання в Німеччині!<br>
+        Ласкаво просимо до "EASYJOB" – вашого надійного партнера у пошуку роботи та кар'єрного зростання в Німеччині!<br>
         <p>
   Наша місія - допомогти співвітчизникам з України знайти якісні та перспективні робочі місця на німецькому ринку праці. Ми розуміємо, наскільки важливо мати стабільну та задовільну роботу за кордоном, тому надаємо вам широкий спектр послуг та ресурсів для досягнення цієї мети.
 </p>
@@ -38,7 +43,7 @@
     <li class="nain-info-item">Підтримка на всіх етапах: Ми допомагаємо не лише з пошуком роботи, а й надаємо підтримку з оформлення документів, підготовки до співбесід, адаптації до нового середовища та багато іншого.</li>
     <li class="nain-info-item">Навчання та розвиток: Ми пропонуємо можливості для професійного зростання через навчання та підвищення кваліфікації, щоб ви могли досягти нових вершин у вашій кар'єрі.</li>
     <li class="nain-info-item">Культурна спільнота: Ми розуміємо, як важливо мати підтримку у новій країні. Наша спільнота українців в Німеччині допоможе вам швидше адаптуватися та знайти нових друзів.</li>
-    <li class="nain-info-item">Нехай ваша робоча мрія стане реальністю з "Job Center"! З нами ви не лише знайдете роботу, а й зможете побудувати успішну кар'єру в Німеччині. Запрошуємо вас приєднатися до нашої спільноти та розпочати новий етап у вашому житті вже сьогодні.</li>
+    <li class="nain-info-item">Нехай ваша робоча мрія стане реальністю з "EASYJOB"! З нами ви не лише знайдете роботу, а й зможете побудувати успішну кар'єру в Німеччині. Запрошуємо вас приєднатися до нашої спільноти та розпочати новий етап у вашому житті вже сьогодні.</li>
   </ul>
       </span>
       <div class="action-btn">
@@ -101,6 +106,27 @@ methods:{
   text-transform: uppercase;
   letter-spacing: 1px;
 }
+.faceb{
+  text-decoration: none;
+}
+.faceb-name{
+  font-family: 'Rubik', sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  color: #3498db;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+.tel-num{
+  text-decoration: none;
+  font-family: 'Instrument Sans', sans-serif;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 325;
+  line-height: 95%;
+  letter-spacing: 2.32px;
+  color: #333333;
+}
 .name {
   font-family: 'Instrument Sans', sans-serif;
   font-size: 32px;
@@ -108,7 +134,12 @@ methods:{
   font-weight: 325;
   line-height: 95%;
   letter-spacing: 2.32px;
-  color: #333333; /* Темно-серый цвет текста */
+  color: #333333;
+}
+.name-contacts{
+  display: flex;
+  flex-direction: column;
+
 }
 
 .header-text {
