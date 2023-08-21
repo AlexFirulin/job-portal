@@ -48,9 +48,17 @@
       </span>
       <div class="action-btn">
       <button class="call-to-action" @click="showVac"><span class="btn-text">Переглянути вакансіі</span></button>
-      <button class="call-to-action"><span class="btn-text">Дзвоніть одразу</span></button>
+      <button class="call-to-action" @click="showContacts"><span class="btn-text">Дзвоніть одразу</span></button>
     </div>
 
+  </div>
+  <div class="popup" v-if="showContact">
+    <div class="popup-content">
+      <div class="popup-content-text">+4915111032160</div>
+      <div class="popup-content-text"> або звертайтесь в нашу групу в</div>
+      <a class="popup-content-text" href="https://www.facebook.com/groups/2216498172073103"><span class="fb-small">Facebook</span></a>
+        </div>
+        <button class="call-to-call" @click="showContacts"> <span>X</span></button>
   </div>
 </div>
 </template>
@@ -62,12 +70,16 @@ export default {
 name: 'MainPage',
 data(){
   return{
-    showJob:false
+    showJob:false,
+    showContact: false
   }
 },
 methods:{
   showVac(){
     this.showJob = !this.showJob
+  },
+  showContacts(){
+    this.showContact = !this.showContact
   }
 }
 }
@@ -149,7 +161,7 @@ methods:{
   font-weight: 325;
   line-height: 95%;
   letter-spacing: 1rem;
-  color: #333333; /* Темно-серый цвет текста */
+  color: #333333;
 }
 
 .header {
@@ -180,7 +192,7 @@ methods:{
 }
 
 .nav-item:hover {
-  background: #004e8a; /* Темно-синий цвет с меньшим насыщенным оттенком при наведении */
+  background: #004e8a;
 }
 
 .nav-link {
@@ -195,7 +207,7 @@ methods:{
   font-weight: 325;
   line-height: 95%;
   letter-spacing: 1px;
-  color: #ffffff; /* Белый цвет текста */
+  color: #ffffff;
 }
 
 .main-page-content {
@@ -264,5 +276,50 @@ methods:{
   height: 1px;
   background-color: #0072c6;;
   margin: 20px 0;
+}
+.popup{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  top: 30%;
+  background: #3c3838;
+  color: #dedede;
+  padding: 15px;
+  border-radius: 15px;
+}
+.popup-content{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+  padding: inherit;
+}
+.popup-content-text{
+  font-family: 'Instrument Sans';
+  font-size: 26px;
+  font-style: normal;
+  font-weight: 500;
+  letter-spacing: -.52px;
+  line-height: 120%;
+  text-decoration: none;
+  color: #dedede;
+}
+.call-to-call{
+  margin: 10px auto;
+  padding: 10px 10px ;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+}
+.fb-small{
+  font-family: 'Rubik', sans-serif;
+  font-size: 18px;
+  font-weight:400;
+  color: #3498db;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  cursor: pointer;
 }
 </style>
