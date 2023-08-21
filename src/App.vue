@@ -8,7 +8,7 @@
         <div class=""><span class="name"></span></div>
         <div class="name-contacts">
           <a href="tel:+4915111032160" class="tel-num"><span>+4915111032160</span></a>
-          <a href="" class="faceb"><span class="faceb-name">Facebook</span></a>
+          <a href="https://www.facebook.com/groups/2216498172073103" class="faceb"><span class="faceb-name">Facebook</span></a>
         </div>
       </div>
       <div class="header">
