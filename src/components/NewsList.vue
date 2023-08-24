@@ -176,7 +176,7 @@ export default {
 }
 
 .news-article {
-  max-width: 600px;
+  max-width: 80%;
   background-color: #f4f4f4;
   padding: 20px;
   border: 1px solid #ddd;
